@@ -1,0 +1,749 @@
+
+
+img {
+    max-width: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Container */
+
+.container {
+    max-width: 1100px;
+
+    margin: 0 auto;
+  
+    /* margin-left: 5%; */
+    padding: center;
+    background-color:rgb(255, 255, 255) ;
+    justify-content: flex;
+    
+}
+
+/* Header Area */
+.header {
+    max-width: 1100px;
+    
+    width: 1100px;
+    margin: 0 auto;
+    
+
+    padding: center;
+    z-index: 1; 
+    position: relative;
+
+}
+
+
+
+.header-top {
+    /* padding-top: 10px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    text-align: center;
+    
+    /* justify-items: flex-end; */
+}
+/* Ellipse image styling */
+.elips-ye {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 350px; /* Adjust the width as needed */
+    height: auto; /* Maintains aspect ratio */
+    z-index: -1; /* Sends the ellipse image behind the container */
+    opacity: 0.7; /* Optional: Adds slight transparency */
+}
+.menu {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    /* padding-top: 5%; */
+    text-align: center;
+    font-size: 16px;
+    
+}
+
+.menu-left, .menu-right {
+    display: flex;
+    gap: 20px;
+    padding-left: 5%;
+    padding-right: 5%;
+flex-direction: row;
+align-items: center;
+display: flex;
+}
+
+.menu-left li, .menu-right li {
+    list-style: none;
+}
+
+.menu-left a, .menu-right a {
+    color: #333;
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+    font-family: Cera Pro;
+
+font-weight: 400;
+line-height: 21.01px;
+text-align: left;
+
+}
+
+.menu-left a:hover, .menu-right a:hover {
+    color: #007BFF;
+}
+
+.logo {
+    font-family: Cera Pro;
+font-size: 29.25px;
+font-weight: 400;
+line-height: 36.77px;
+text-align: center;
+
+
+    color: #333; 
+    
+}
+.header-content  {
+    flex: 1;
+    height: fit-content;
+   
+   
+}
+.header-content h2 {
+    position: relative; /* Allows for relative positioning within the header */
+    font-family: 'Axiforma', sans-serif; /* Ensure proper fallback font */
+    font-weight: normal; /* Corrected font weight value */
+    font-size: 50px; /* Adjusted for simplicity */
+    color: #000000; /* Text color */
+    text-align: left; /* Aligns the text to the left */
+    margin-left: 40px; /* Moves the text slightly to the right */
+    margin-top: 20px; /* Adjusted to place it just below the image */
+}
+.header-content .decorative-img{
+  
+    position: relative;
+    display: flex;
+    padding-left: 10%;
+    z-index: -10px;
+    justify-items: flex-start;
+    top: 20%;
+}
+
+.header-bottom {
+    position: relative; /* Sets up a positioning context for children */
+    display: flex;
+    justify-content: flex; /* Align content to the start */
+    align-items: center; /* Center vertically */
+    width: 100%;
+
+}
+
+.header-right {
+    flex: 1;
+    text-align: right;
+    position: absolute; /* Allows absolute positioning of child elements */
+    width: 550px; /* Ensures it spans the full width of the page */
+    padding-top: 10%; /* Adjust this value to control how far from the top the image is */
+    top: 12%;
+    left: 50%;
+   
+}
+
+.header-right-large-img {
+    display: flex;
+    justify-content: flex; /* Aligns content to the start */
+    position: relative;
+   
+    right: 15%; /* Moves content to the right */
+    padding-bottom: 30%;
+    margin-top: -40%;
+}
+
+.header-main-img {
+    width: 80%;
+    
+    max-width: 600px; /* Ensures it doesn't get too large on big screens */
+    border-radius: 47% 47% 0 0;
+    display: block; /* Ensures the margin works */
+    box-shadow: 10px 4px 15px rgba(206, 33, 33, 0.1); /* Adds a subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    z-index: -10px; /* Ensure the image is above background elements */
+    border: 4px solid rgba(236, 10, 10, 0.781); /* Red border */
+   
+}
+
+.header-sub-image {
+    position: absolute; /* Position it relative to the parent container */
+    width: 50%; /* Half the width of the main image */
+    height: auto; /* Maintain aspect ratio */
+   margin-top: 60%;
+   margin-left: 42%;
+    
+}
+
+.header-main-img::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: 0;
+    bottom: 0;
+    border: 5px solid red; /* Red slim border */
+    border-radius: 40% 40% 0 0; /* Matches the border-radius of the image */
+    z-index: -1; /* Places the border behind the image */
+}
+
+.header-main-img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    /* box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); Enhances shadow on hover */
+}
+
+
+
+
+
+/* Style for the address box */
+.address-box {
+    position: absolute; /* Allows the box to float over other items */
+    top: 800px; /* Adjust as needed to control vertical positioning */
+    left: 40px; /* Adjust as needed to control horizontal positioning */
+    
+    padding: 25px; /* Inner spacing */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    width: 800px;
+    z-index: 1  ;
+    background: rgba(243, 243, 243, 0.6);
+backdrop-filter: blur(17.7606px);
+margin-top: -35%;
+
+}
+
+/* Style for the address text */
+.address {
+    display: flex; /* Enables flexbox layout */
+    align-items: center; /* Vertically centers the items */
+    gap: 180px; /* Space between the city and location */
+    justify-content: center;
+}
+.address P{
+    font-size: 30px;
+    font-style: normal;
+    color: #00000065;
+    justify-content: center ;
+}
+
+/* Individual text styling */
+.city, .location {
+    margin: 0; /* Remove default margins */
+}
+
+/* Button styling */
+.section-button {
+    margin-top: 0px; /* Space above the button */
+    padding: 0px 0px; /* Button padding */
+    border: none; /* Remove default border */
+    background-color: #FF5722; /* Button color */
+    color: white; /* Text color */
+    border-radius: 5px; /* Rounded button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.section-button:hover {
+    background-color: #E64A19; /* Darker shade on hover */
+}
+
+
+.section-button {
+    font-size: 20px; /* Button font size */
+    padding: 10px 20px;
+    background-color: #ff3d3d; /* Button background color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px; /* Space above the button */
+}
+
+
+
+.section-button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.section-button:hover {
+    background-color: #0056b3;
+}
+
+.block-people {
+    position: relative;
+    height: auto;
+    /* Adjust this value to control overlap */
+    display: flex; /* Use flexbox to arrange children in a row */
+    align-items: left; /* Align items vertically */
+    justify-content: left; /* Center the block */
+    
+
+    
+}
+
+.people {
+    display: flex; /* Align images in a row */
+    justify-content: center; /* Centers images horizontally */
+    position: absolute; /* Necessary for absolute positioning */
+    height: 30px;
+    width: 30px;
+    gap: 10px;
+    margin-top: 15%;
+    left: 8%;
+}
+
+.people img {
+    width: 80px; /* Set a specific width for the images */
+    height: auto; /* Maintain aspect ratio */
+    margin-left: -17px; /* Overlap images by 20% */
+    z-index: 1; /* Ensure images are above other content */
+}
+
+.block-people-content {
+    
+    color: #141010; /* Text color */
+    width: auto; /* Let the width adapt to content */
+    margin-left: 25px; /* Space between images and text */
+   position: relative;
+    margin-top: 13%;
+    width: 270px;
+    width: 300px;
+
+
+}
+.block-people-content p{ 
+    top: 17%;
+    position: relative;
+    font-size: 14px;
+   left: 48%;
+
+    
+}
+.more {
+    width: 80px; /* Set a specific width for the images */
+    height: auto; /* Maintain aspect ratio */
+    margin-left: -20px; /* Overlap images by 20% */
+    z-index: 1; /* Ensure images are above other content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+    background-color: #00C9A7;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    border: 2px solid #fff;
+}
+
+/* circle image 3 upside of  head  image*/
+.circle-images {
+    display: flex;
+    justify-content: center; /* Centers the images horizontally */
+    align-items: center; /* Aligns the images vertically */
+    position: top;
+    gap: 20px; /* Space between images */
+    
+
+}
+
+.circle-img {
+    position: absolute;
+    border-radius: 50%; /* Makes the images circular */
+    object-fit: cover; /* Ensures the image fits within the circle */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Adds a soft shadow */
+    transition: transform 0.3s ease; /* Smooth scaling animation */
+    margin-left: 15%;
+}
+
+/* Specific sizes for the three images */
+.circle-images img:nth-child(1) {
+    width: 150px;
+    height: 150px;
+    top: -10%;
+    left: 20%;
+}
+
+.circle-images img:nth-child(2) {
+    width: 120px;
+    height: 120px;
+    top: 10%;
+    left: 50%;
+}
+
+.circle-images img:nth-child(3) {
+    width: 50px;
+    height: 50px;
+    top: -10%;
+    left: 50%;
+}
+
+/* Floating animation */
+.circle-img:hover {
+    transform: scale(1.1); /* Slightly enlarge image on hover */
+}
+
+
+/* Sponsor Section */
+.sponsor .container{
+    position: relative;
+    flex: 1;
+    top: 20%;
+}
+.sponsor {
+    background-color: #ffffff;
+   
+}
+
+.sponsor img {
+    margin:  20px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.sponsor img:hover {
+    opacity: 1;
+}
+.sponsor {
+    background-color: #fff; /* You can adjust the background color */
+    padding: 20px 0;
+}
+
+.sponsor .container {
+    display: flex;
+    justify-content: center; /* Horizontally center the logos */
+    align-items: center; /* Vertically center the logos (if needed) */
+    gap: 30px; /* Adds space between each logo */
+    flex-wrap: wrap; /* Ensures logos wrap on smaller screens */
+}
+
+.sponsor .container img {
+    max-height: 40px; /* Set a max height for the logos */
+    transition: opacity 0.3s ease; /* Add a hover effect */
+}
+
+.sponsor .container img:hover {
+    opacity: 0.8; /* Slight transparency on hover */
+}
+
+
+/* Service Section */
+.second-page-container {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+}
+
+
+
+.content {
+    display: flex;
+    max-width: 1200px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+.image-section {
+    position: relative;
+    flex: 1;
+    padding: 50px;
+}
+
+
+.image-section img {
+    width: 80%;
+    height: auto;
+    border-top-left-radius: 50% 50%;
+    border-top-right-radius: 50% 50%;
+    object-fit: cover;
+    max-height: 450px; 
+}
+
+.calendar {
+position: absolute; 
+top: 70%; 
+right: 15%; 
+width: 100px; 
+height: 100px;
+background: none; 
+}
+
+.calendar img {
+width: 100%; 
+height: 100%;
+object-fit: contain; 
+
+} 
+
+
+.text-section {
+    flex: 1;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text-section h1 {
+    font-size: 2.8em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.text-section p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+}
+
+.button-container a {
+    text-decoration: none;
+    padding: 12px 25px;
+    margin-right: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    color: white;
+    background-color: #f4623a;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.button-container a:hover {
+    background-color: #e1502d;
+}
+
+
+.button-container .play-button {
+    background-color: transparent;
+    border: 2px solid #f4623a;
+    color: #f4623a;
+    transition: background-color 0.3s, color 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.button-container .play-button:hover {
+    background-color: #f4623a;
+    color: white;
+}
+
+
+.button-container .play-button::before {
+    content: '▶';
+    margin-right: 8px;
+    font-size: 16px;
+    
+}
+.highlight {
+    color: #ff5733;
+   font-size: large; 
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 0;
+}
+
+footer h3 {
+    font-family: 'Cookie', cursive;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+footer p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.footer-links ul {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: #fff;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #007BFF;
+}
+
+.visions .container .visions-content{
+    flex: 1;
+    display: block;
+}
+.section-sub-title{
+    color: orangered;
+    text-align: left;
+    padding-left:8%;
+    padding-top: 3%;
+    font-size: 24px;
+    /* font-weight: 600; */
+   
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+.visions .container{
+    padding: center;
+    flex: 1;
+ 
+}
+.visions .container .visions-content .section-title {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px; /* Adjusted for better readability */
+    line-height: 36px;
+    max-width: 50%; /* Avoid fixed width to prevent overflow */
+    display: flow-root; /* Using block instead of flex for a clean flow */
+    padding-left: 8%;
+    z-index: 1; /* Bringing it above other elements */
+    position: relative; /* Instead of absolute positioning */
+    word-wrap: break-word; /* Correcting text wrapping */
+    text-decoration: none; /* Removed 'solid', as it's not a valid text-decoration option */
+}
+
+.visions .container .visions-right{
+
+position: relative;
+flex: 1;
+padding-bottom: 4.1%;
+
+}
+.visions .container .visions-right .visions-large-img{
+  
+    display: flex;
+    position: absolute;
+   
+    right: -50%; /* Moves content to the right */
+    width: 50%;
+    margin: -58% 48%;
+
+}
+
+.visions .container .visions-content {
+    float: none;
+    z-index: -10px;
+}
+.visions .container .visions-content .section-text{
+    display: flex;
+    justify-content: flex;
+    text-align: left;
+    width: 480px;
+    padding-left: 8%;
+position:relative;
+font-family: 'Avenir';
+font-style: normal;
+font-weight: 500;
+font-size: 15.6711px;
+line-height: 38px;
+
+color: #000000;
+
+
+    
+    
+}
+
+.visions .container .visions-content .visions-quality-box {
+    display: flex;
+    flex-wrap: wrap; /* Allows boxes to wrap to the next line */
+    gap: 10px; /* Space between each box */
+    justify-content: space-between; /* Spreads the boxes evenly */
+    width: 45%; /* Container takes full width */
+    height: auto; /* Adjust height dynamically */
+    padding-left: 7%;
+}
+
+.visions .container .visions-content .visions-quality-box .visions-box {
+    padding-left: 5%;
+    display: flex;
+    flex-direction: column; /* Stacks image, heading, and paragraph vertically */
+    align-items: flex-start; /* Aligns items to the left */
+    width: 200px; /* Sets the width for the box */
+    padding: 10px; /* Adds space inside the box */
+    box-sizing: border-box; /* Ensures padding doesn’t affect box width */
+   
+}
+
+.visions-box h4 {
+    margin: 0; /* Removes default margin */
+    font-size: 14px; /* Adjusts heading size */
+    width: 270px; /* Sets max width for text */
+    padding-bottom: 10px;
+}
+
+.visions-box p {
+    margin: 5px 0; /* Space between heading and paragraph */
+    font-size: 14px; /* Adjusts text size */
+    color: #555; /* Optional: Text color */
+    max-width: 200px; /* Constrains text width */
+    height: auto;
+}
+
+.visions-box img {
+    width: 15px; /* Adjusts icon size */
+    height: auto; /* Maintains aspect ratio */
+    margin-top: 10px; /* Adds space between text and image */
+}
+.visions .container .visions-content .section-button {
+    background-color: rgb(243, 87, 15); /* Sets the button background color to orange */
+    color: white; /* Optional: Sets the text color to white for contrast */
+    border: none; /* Optional: Removes default border */
+    font-size: 14px; /* Adjust the font size */
+    cursor: pointer; /* Changes the cursor to pointer on hover */
+    border-radius: 5px; /* Optional: Adds rounded corners */
+    transition: background-color 0.3s ease; /* Adds a smooth transition on hover */
+    bottom: 20%;
+    position: relative;
+    left: 7%;
+
+    
+}
+
+.visions .container .visions-content  .section-button:hover {
+    background-color: darkorange; /* Changes to a darker orange on hover */
+}
